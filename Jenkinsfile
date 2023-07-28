@@ -20,7 +20,7 @@ pipeline {
         }
         stage('Create container') {
             steps {
-                sh 'docker run -d -p 3000:80 --name flask-app sohanmer/flask-app'
+                sh 'docker run -d -p 3000:5000 --name flask-app sohanmer/flask-app'
             }
         }
     }
