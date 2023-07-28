@@ -3,6 +3,7 @@ pipeline {
     stages {
         stage("Clone Git Repository") {
             steps {
+                dir('/home/ubuntu/workspace/flask_app_build_pipeline')
                 git(
                     url: "https://github.com/sohanmer/simple-cicd-pipeline.git",
                     branch: "main",
