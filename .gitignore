@@ -1,2 +1,4 @@
 .terraform
-cicd-key
+cicd-keyterraform.tfstate
+terraform.tfstate.backup
+.terraform.lock.hcl
