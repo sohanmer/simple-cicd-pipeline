@@ -43,6 +43,20 @@ Run the command inside the flask-project directory to create an image of your we
 
         export AWS_ACCESS_KEY_ID="my-access-key" // my-access-key will be your user's access key
         export AWS_SECRET_ACCESS_KEY="my-secret-key" // my-secret-key will be your user's secret key
+    
+    Once the above processes are done you're good to go with your resource creation. Run the below command inside your terraform-project.
+
+    To initialize the terraform use:-
+
+        terraform init
+    
+    To show the terraform plan for the resource creation use:-
+        
+        terraform plan
+
+    To create the terraform resources use:-
+
+        terraform apply
 
  
  
