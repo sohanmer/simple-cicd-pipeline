@@ -57,6 +57,10 @@ Run the command inside the flask-project directory to create an image of your we
     To create the terraform resources use:-
 
         terraform apply
+    
+    It'll take few seconds to 1 mins approx. to complete and after the resources are created successfully two public IP's will be printed(for Jenkins Master and the Slave server).
 
- 
- 
+
+Once the resources are created, access the Jenkins master at jenkins_public_ip:8080 and configure the Jenkins with default settings. Add the slave node with the label slave01 using the manage jenkins option. Once slave node is added you're good to create a pipeline.
+
+Create a pipeline in the Jenkins and use the Groovy code provided in the Jenkinsfile. Configure your pipeline to start the build using a github trigger. If everything ran as expected you can now access your webapp at slave_public_ip:3000
