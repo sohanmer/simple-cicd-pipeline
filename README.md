@@ -1,5 +1,5 @@
 
-## Welcome
+## Simple CI/CD pipeline 
 
 This is a simple flask application created to understand the basics of a CICD pipeline.
 To keep this simple I am only using a minimal webapp built on flask, Docker to containerize the webapp, Terraform to provision resources in AWS and Jenkins to build the Continous Integration and Continous Deployment.
