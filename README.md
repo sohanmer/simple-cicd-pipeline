@@ -61,8 +61,11 @@ Run the command inside the flask-project directory to create an image of your we
     It'll take few seconds to 1 mins approx. to complete and after the resources are created successfully two public IP's will be printed(for Jenkins Master and the Slave server).
 
 
-Once the resources are created, access the Jenkins master at jenkins_public_ip:8080 and configure the Jenkins with default settings. Add the slave node with the label slave01 using the manage jenkins option. Once slave node is added you're good to create a pipeline.
+Once the resources are created, access the Jenkins master at http://<jenkins_public_ip>:8080 and configure the Jenkins with default settings. Add the slave node with the label slave01 using the manage jenkins option. Once slave node is added you're good to create a pipeline.
 
-Create a pipeline in the Jenkins name **flask_app_build_pipeline** and use the Groovy code provided in the Jenkinsfile. Configure your pipeline to start the build using a github trigger. If everything ran as expected you can now access your webapp at slave_public_ip:3000.
+Create a pipeline in the Jenkins name **flask_app_build_pipeline** and use the Groovy code provided in the Jenkinsfile. Configure your pipeline to start the build using a github trigger. If everything configured as expected you can now access your webapp at slave_public_ip:3000.
 
 Now everytime you push the code to your main branch in the github a webhook will trigger the jenkins pipeline and the code will be packaged and deployed in the slave server.
+
+### Note:- This pipeline uses t2.micro instance which is in free tier(if free tier is applicable for you) and will not cost you any money but the data transfer between master and slave can cost you some amount( < $1). But please make sure you delete the resources once you completed the excercise using:-
+    terraform destroy
