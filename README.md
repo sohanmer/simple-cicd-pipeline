@@ -67,5 +67,5 @@ Create a pipeline in the Jenkins name **flask_app_build_pipeline** and use the G
 
 Now everytime you push the code to your main branch in the github a webhook will trigger the jenkins pipeline and the code will be packaged and deployed in the slave server.
 
-### Note:- This pipeline uses t2.micro instance which is in free tier(if free tier is applicable for you) and will not cost you any money but the data transfer between master and slave can cost you some amount( < $1). But please make sure you delete the resources once you completed the excercise using:-
+#### Note:- This pipeline uses t2.micro instance which is in free tier(if free tier is applicable for you) and will not cost you any money but the data transfer between master and slave can cost you some amount( < $1). But please make sure you delete the resources once you completed the excercise using:-
     terraform destroy
